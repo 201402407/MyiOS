@@ -15,6 +15,7 @@
 		E82A08AE24B2BA160005C300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82A08AC24B2BA160005C300 /* LaunchScreen.storyboard */; };
 		E82A08B924B2BA160005C300 /* NativeTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A08B824B2BA160005C300 /* NativeTestAppTests.swift */; };
 		E82A08C424B2BA160005C300 /* NativeTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A08C324B2BA160005C300 /* NativeTestAppUITests.swift */; };
+		E8BAE0A024B2FFE10017B5DF /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAE09F24B2FFE10017B5DF /* SubViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E82A08BF24B2BA160005C300 /* NativeTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NativeTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82A08C324B2BA160005C300 /* NativeTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeTestAppUITests.swift; sourceTree = "<group>"; };
 		E82A08C524B2BA160005C300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8BAE09F24B2FFE10017B5DF /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E82A08AA24B2BA160005C300 /* Assets.xcassets */,
 				E82A08AC24B2BA160005C300 /* LaunchScreen.storyboard */,
 				E82A08AF24B2BA160005C300 /* Info.plist */,
+				E8BAE09F24B2FFE10017B5DF /* SubViewController.swift */,
 			);
 			path = NativeTestApp;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				E82A08A624B2BA130005C300 /* ViewController.swift in Sources */,
 				E82A08A224B2BA130005C300 /* AppDelegate.swift in Sources */,
 				E82A08A424B2BA130005C300 /* SceneDelegate.swift in Sources */,
+				E8BAE0A024B2FFE10017B5DF /* SubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
