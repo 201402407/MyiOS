@@ -40,8 +40,11 @@ class ViewController: UIViewController {
         // UIModalTransitionStyle.coverVertical : 아래에서 위로 올라가면서 전환
         // UIModalTransitionStyle.crossDissolve : 전화면에서 다음화면이 교차되며 뚜렷하게 표현되는 전환
         // UIModalTransitionStyle.flipHorizontal : 화면 중앙 축을 기준으로 회전하며 전환
-        // UIModalTransitionStyle.partialCurl : 화면 오른쪽 아래에서 페이지가 올라가는 효과로 전환
-        subVC.modalTransitionStyle = .flipHorizontal
+        // UIModalTransitionStyle.partialCurl : 화면 오른쪽 아 래에서 페이지가 올라가는 효과로 전환
+        subVC.modalTransitionStyle = .crossDissolve
+ 
+        // 화면 출력(present) 종류
+        subVC.modalPresentationStyle = .overCurrentContext
         
         self.present(subVC, animated: true, completion: nil)
     }

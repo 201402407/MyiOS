@@ -22,11 +22,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZP-H5-c2F">
-                                <rect key="frame" x="125" y="190" width="165" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ys-bg-AnK">
                                 <rect key="frame" x="138" y="732" width="138" height="30"/>
                                 <state key="normal" title="이전 화면으로 돌아가기"/>
@@ -34,15 +29,29 @@
                                     <action selector="movePrevView:" destination="HmJ-iK-djL" eventType="touchDown" id="a0i-xX-Dcn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-Nn-jXW">
+                                <rect key="frame" x="187" y="264" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareInfo:" destination="HmJ-iK-djL" eventType="touchDown" id="gmu-SY-WMu"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZP-H5-c2F">
+                                <rect key="frame" x="191" y="190" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="EZP-H5-c2F" firstAttribute="top" secondItem="iRK-Z9-zG4" secondAttribute="bottom" constant="95" id="8qX-qg-zVT"/>
                             <constraint firstItem="3Ys-bg-AnK" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="HsA-NS-uOc"/>
+                            <constraint firstItem="EZP-H5-c2F" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="KgZ-NS-AQV"/>
+                            <constraint firstItem="Sc4-Nn-jXW" firstAttribute="top" secondItem="EZP-H5-c2F" secondAttribute="bottom" constant="40" id="MCS-pj-oug"/>
                             <constraint firstItem="iRK-Z9-zG4" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="P8E-OO-uiz"/>
-                            <constraint firstItem="EZP-H5-c2F" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="iyy-Ko-0Wc"/>
+                            <constraint firstItem="Sc4-Nn-jXW" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="VFJ-00-Hu9"/>
                             <constraint firstItem="iRK-Z9-zG4" firstAttribute="top" secondItem="TpV-zT-6Xh" secondAttribute="top" constant="30" id="jB3-xC-1AK"/>
                             <constraint firstItem="TpV-zT-6Xh" firstAttribute="bottom" secondItem="3Ys-bg-AnK" secondAttribute="bottom" constant="100" id="mzJ-Yr-txP"/>
+                            <constraint firstItem="EZP-H5-c2F" firstAttribute="top" secondItem="iRK-Z9-zG4" secondAttribute="bottom" constant="95" id="w3W-5W-hNR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TpV-zT-6Xh"/>
                     </view>
