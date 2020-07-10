@@ -16,6 +16,13 @@
 		E82A08B924B2BA160005C300 /* NativeTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A08B824B2BA160005C300 /* NativeTestAppTests.swift */; };
 		E82A08C424B2BA160005C300 /* NativeTestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82A08C324B2BA160005C300 /* NativeTestAppUITests.swift */; };
 		E8BAE0A024B2FFE10017B5DF /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BAE09F24B2FFE10017B5DF /* SubViewController.swift */; };
+		E8D97B6924B6EC7C0097FBEC /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D97B6824B6EC7C0097FBEC /* Notification.swift */; };
+		E8D97B6B24B6FE3B0097FBEC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D97B6A24B6FE3B0097FBEC /* Util.swift */; };
+		E8D97B6F24B804880097FBEC /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D97B6E24B804880097FBEC /* ThirdViewController.swift */; };
+		E8D97B7124B815850097FBEC /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D97B7024B815850097FBEC /* MyTabBarController.swift */; };
+		E8D97B7624B816F70097FBEC /* temp2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8D97B7324B816F60097FBEC /* temp2.jpg */; };
+		E8D97B7724B816F70097FBEC /* temp3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8D97B7424B816F70097FBEC /* temp3.jpg */; };
+		E8D97B7824B816F70097FBEC /* temp1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E8D97B7524B816F70097FBEC /* temp1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		E82A08C324B2BA160005C300 /* NativeTestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeTestAppUITests.swift; sourceTree = "<group>"; };
 		E82A08C524B2BA160005C300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8BAE09F24B2FFE10017B5DF /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		E8D97B6824B6EC7C0097FBEC /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		E8D97B6A24B6FE3B0097FBEC /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		E8D97B6E24B804880097FBEC /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		E8D97B7024B815850097FBEC /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		E8D97B7324B816F60097FBEC /* temp2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = temp2.jpg; path = ../../../../Downloads/6_20200710_111600.jpg_200710/temp2.jpg; sourceTree = "<group>"; };
+		E8D97B7424B816F70097FBEC /* temp3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = temp3.jpg; path = ../../../../Downloads/6_20200710_111600.jpg_200710/temp3.jpg; sourceTree = "<group>"; };
+		E8D97B7524B816F70097FBEC /* temp1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = temp1.jpg; path = ../../../../Downloads/6_20200710_111600.jpg_200710/temp1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,8 @@
 		E82A08A024B2BA130005C300 /* NativeTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				E8D97B7224B816930097FBEC /* Support */,
+				E8D97B6724B6EC4C0097FBEC /* NativeFunction */,
 				E82A08A124B2BA130005C300 /* AppDelegate.swift */,
 				E82A08A324B2BA130005C300 /* SceneDelegate.swift */,
 				E82A08A524B2BA130005C300 /* ViewController.swift */,
@@ -109,6 +125,9 @@
 				E82A08AC24B2BA160005C300 /* LaunchScreen.storyboard */,
 				E82A08AF24B2BA160005C300 /* Info.plist */,
 				E8BAE09F24B2FFE10017B5DF /* SubViewController.swift */,
+				E8D97B6A24B6FE3B0097FBEC /* Util.swift */,
+				E8D97B6E24B804880097FBEC /* ThirdViewController.swift */,
+				E8D97B7024B815850097FBEC /* MyTabBarController.swift */,
 			);
 			path = NativeTestApp;
 			sourceTree = "<group>";
@@ -129,6 +148,24 @@
 				E82A08C524B2BA160005C300 /* Info.plist */,
 			);
 			path = NativeTestAppUITests;
+			sourceTree = "<group>";
+		};
+		E8D97B6724B6EC4C0097FBEC /* NativeFunction */ = {
+			isa = PBXGroup;
+			children = (
+				E8D97B6824B6EC7C0097FBEC /* Notification.swift */,
+			);
+			path = NativeFunction;
+			sourceTree = "<group>";
+		};
+		E8D97B7224B816930097FBEC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E8D97B7524B816F70097FBEC /* temp1.jpg */,
+				E8D97B7324B816F60097FBEC /* temp2.jpg */,
+				E8D97B7424B816F70097FBEC /* temp3.jpg */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +272,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D97B7624B816F70097FBEC /* temp2.jpg in Resources */,
 				E82A08AE24B2BA160005C300 /* LaunchScreen.storyboard in Resources */,
 				E82A08AB24B2BA160005C300 /* Assets.xcassets in Resources */,
 				E82A08A924B2BA130005C300 /* Main.storyboard in Resources */,
+				E8D97B7724B816F70097FBEC /* temp3.jpg in Resources */,
+				E8D97B7824B816F70097FBEC /* temp1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +303,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E82A08A624B2BA130005C300 /* ViewController.swift in Sources */,
+				E8D97B7124B815850097FBEC /* MyTabBarController.swift in Sources */,
+				E8D97B6B24B6FE3B0097FBEC /* Util.swift in Sources */,
+				E8D97B6F24B804880097FBEC /* ThirdViewController.swift in Sources */,
+				E8D97B6924B6EC7C0097FBEC /* Notification.swift in Sources */,
 				E82A08A224B2BA130005C300 /* AppDelegate.swift in Sources */,
 				E82A08A424B2BA130005C300 /* SceneDelegate.swift in Sources */,
 				E8BAE0A024B2FFE10017B5DF /* SubViewController.swift in Sources */,

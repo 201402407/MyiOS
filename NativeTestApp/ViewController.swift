@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -15,18 +16,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        let testImageViewController = UIImageView
+//        self.authCheck()
     }
 
     // Alert Dialog 호출 버튼 이벤트
-    @IBAction func makeAlertDialog(_ sender: Any) {
+    @IBAction func getAlertDialog(_ sender: Any) {
         print("[START] make Alert Dialog!")
-        makeAlertDialog()
+        makeAlertDialog(title: "TEST", message: "Alert Dialog")
     }
     
     // ActionSheet Dialog 호출 버튼 이벤트
-    @IBAction func makeActionSheetDialog(_ sender: Any) {
+    @IBAction func getActionSheetDialog(_ sender: Any) {
         print("[START] make ActionSheet Dialog!")
-        makeAlertDialog(false)
+        makeAlertDialog(title: "TEST", message: "Alert Dialog", false)
+//        Notification(self).getNoti(title: "asd", subtitle: "ff", body: "ggasg")
     }
     
     // 다음 ViewController 이동 호출 버튼 이벤트
@@ -34,7 +38,7 @@ class ViewController: UIViewController {
         print("[START] move Next View!")
         // 다른 storyboard의 VC 객체 가져오기
         // present로 VC 실행
-        guard let subVC = self.storyboard?.instantiateViewController(withIdentifier: "subView") else { return }
+        guard let subVC = self.storyboard?.instantiateViewController(withIdentifier: "thirdView") else { return }
         
         // 화면 전환 스타일 설정
         // UIModalTransitionStyle.coverVertical : 아래에서 위로 올라가면서 전환
@@ -56,12 +60,12 @@ class ViewController: UIViewController {
     }
     
     // Alert Dialog 생성
-    func makeAlertDialog(_ isAlert : Bool = true) {
+    func makeAlertDialog(title: String, message: String, _ isAlert : Bool = true) {
 
         // alert : 가운데에서 출력되는 Dialog. 취소/동의 같이 2개 이하를 선택할 경우 사용. 간단명료 해야함.
-        let alert = isAlert ? UIAlertController(title: "TEST", message: "Alert Style 입니다.", preferredStyle: .alert)
+        let alert = isAlert ? UIAlertController(title: title, message: message, preferredStyle: .alert)
         // actionSheet : 밑에서 올라오는 Dialog. 3개 이상을 선택할 경우 사용
-        : UIAlertController(title: "TEST", message: "ActionSheet Style 입니다.", preferredStyle: .actionSheet)
+        : UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         
         // destructive : title 글씨가 빨갛게 변함
         // cancel : 글자 진하게
@@ -86,6 +90,35 @@ class ViewController: UIViewController {
         
         // 화면에 출력
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    // 권한 체크
+    func authCheck() {
+        var isPermitted: Bool = false
+        // Notification Auth Check
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge], completionHandler: {didAllow, Error in
+            print("[INFO] User Notification Auth check : ", didAllow)
+            isPermitted = didAllow
+            DispatchQueue.main.async {
+                if isPermitted {
+                    self.makeAlertDialog(title: "Notification Auth", message: "Notification Auth Permitted!")
+                }
+                else {
+                    self.makeAlertDialog(title: "Notification Auth", message: "Notification Auth Rejected! Recheck, please.")
+                }
+            }
+        })
+    }
+    
+    // UIViewController의 상위 클래스인 UIResponder에는 화면 터치 관련 메소드들이 정의 되어 있다.
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let tabBar = self.tabBarController?.tabBar
+        // tabBar?.isHidden = (tabBar?.isHidden == true) ? false : true
+        
+        //애니메이션 적용해주기
+        UIView.animate(withDuration:  TimeInterval(0.1)){
+        tabBar?.alpha = (tabBar?.alpha == 0 ? 1 : 0)
+        }
     }
 }
 

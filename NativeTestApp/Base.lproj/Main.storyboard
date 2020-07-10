@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ykj-py-xq1">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,49 +13,64 @@
             <objects>
                 <viewController storyboardIdentifier="subView" title="SubView" id="HmJ-iK-djL" customClass="SubViewController" customModule="NativeTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XuW-wF-p7O">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Sub View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRK-Z9-zG4">
-                                <rect key="frame" x="171" y="74" width="72" height="21"/>
+                                <rect key="frame" x="171" y="30" width="72" height="21"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ys-bg-AnK">
-                                <rect key="frame" x="138" y="732" width="138" height="30"/>
+                                <rect key="frame" x="138" y="606" width="138" height="30"/>
                                 <state key="normal" title="이전 화면으로 돌아가기"/>
                                 <connections>
                                     <action selector="movePrevView:" destination="HmJ-iK-djL" eventType="touchDown" id="a0i-xX-Dcn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-Nn-jXW">
-                                <rect key="frame" x="187" y="264" width="40" height="30"/>
+                                <rect key="frame" x="187" y="220" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
                                     <action selector="shareInfo:" destination="HmJ-iK-djL" eventType="touchDown" id="gmu-SY-WMu"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EZP-H5-c2F">
-                                <rect key="frame" x="191" y="190" width="32" height="34"/>
+                                <rect key="frame" x="107" y="146" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Iu1-4X-9Bx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISu-E4-zYe">
+                                <rect key="frame" x="167.66666666666666" y="271" width="79" height="30"/>
+                                <state key="normal" title="Notification"/>
+                                <connections>
+                                    <action selector="getNotification:" destination="HmJ-iK-djL" eventType="touchDown" id="LRa-9h-oSJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ISu-E4-zYe" firstAttribute="top" secondItem="Sc4-Nn-jXW" secondAttribute="bottom" constant="21" id="BSD-Dw-jkf"/>
                             <constraint firstItem="3Ys-bg-AnK" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="HsA-NS-uOc"/>
                             <constraint firstItem="EZP-H5-c2F" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="KgZ-NS-AQV"/>
                             <constraint firstItem="Sc4-Nn-jXW" firstAttribute="top" secondItem="EZP-H5-c2F" secondAttribute="bottom" constant="40" id="MCS-pj-oug"/>
                             <constraint firstItem="iRK-Z9-zG4" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="P8E-OO-uiz"/>
                             <constraint firstItem="Sc4-Nn-jXW" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="VFJ-00-Hu9"/>
+                            <constraint firstItem="ISu-E4-zYe" firstAttribute="centerX" secondItem="XuW-wF-p7O" secondAttribute="centerX" id="bdl-8F-xeb"/>
                             <constraint firstItem="iRK-Z9-zG4" firstAttribute="top" secondItem="TpV-zT-6Xh" secondAttribute="top" constant="30" id="jB3-xC-1AK"/>
                             <constraint firstItem="TpV-zT-6Xh" firstAttribute="bottom" secondItem="3Ys-bg-AnK" secondAttribute="bottom" constant="100" id="mzJ-Yr-txP"/>
                             <constraint firstItem="EZP-H5-c2F" firstAttribute="top" secondItem="iRK-Z9-zG4" secondAttribute="bottom" constant="95" id="w3W-5W-hNR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TpV-zT-6Xh"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="EZP-H5-c2F" id="TXL-ge-CzF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDd-1g-HWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,38 +81,38 @@
             <objects>
                 <viewController storyboardIdentifier="mainView" title="MainView" id="BYZ-38-t0r" customClass="ViewController" customModule="NativeTestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="showActionSheetDialog" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Daz-Oe-NvN">
-                                <rect key="frame" x="126.5" y="238" width="161" height="30"/>
+                                <rect key="frame" x="126.66666666666669" y="194" width="161" height="30"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="ActionSheet Dialog 호출">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
                                 <connections>
-                                    <action selector="makeActionSheetDialog:" destination="BYZ-38-t0r" eventType="touchDown" id="Xmr-oB-2bG"/>
+                                    <action selector="getActionSheetDialog:" destination="BYZ-38-t0r" eventType="touchDown" id="ylH-e1-W03"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="showAlertDialog" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-Aw-ueO">
-                                <rect key="frame" x="152.5" y="328" width="109" height="30"/>
+                                <rect key="frame" x="152.66666666666666" y="284" width="108.99999999999997" height="30"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="alert Dialog 호출">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
                                 <connections>
-                                    <action selector="makeAlertDialog:" destination="BYZ-38-t0r" eventType="touchDown" id="IJn-Y7-J8i"/>
+                                    <action selector="getAlertDialog:" destination="BYZ-38-t0r" eventType="touchDown" id="Zqv-s8-oMt"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Dialog Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qz-S2-pfO">
-                                <rect key="frame" x="164.5" y="118" width="85" height="20.5"/>
+                                <rect key="frame" x="164.66666666666666" y="74" width="85" height="20.666666666666671"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="moveNextView" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULV-Wh-K9T">
-                                <rect key="frame" x="164" y="418" width="86" height="30"/>
+                                <rect key="frame" x="164" y="374" width="86" height="30"/>
                                 <state key="normal" title="다른 화면 이동">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="light"/>
                                 </state>
@@ -105,7 +121,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaV-Kg-ELA">
-                                <rect key="frame" x="86" y="508" width="242" height="30"/>
+                                <rect key="frame" x="86" y="464" width="242" height="30"/>
                                 <state key="normal" title="다른 화면 이동(Navigation Controller)">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="light"/>
                                 </state>
@@ -141,7 +157,7 @@
                 <navigationController storyboardIdentifier="myNC" title="MainView" automaticallyAdjustsScrollViewInsets="NO" id="ykj-py-xq1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JGK-zs-4rw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -156,6 +172,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmc-4o-tyu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="122.54464285714285"/>
+        </scene>
+        <!--Third View-->
+        <scene sceneID="I9S-49-Vus">
+            <objects>
+                <viewController restorationIdentifier="thirdView" storyboardIdentifier="thirdView" title="Third View" id="gcx-gt-vSC" customClass="ThirdViewController" customModule="NativeTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H53-fq-o5v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Third View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFG-gC-M0J">
+                                <rect key="frame" x="166.33333333333334" y="90" width="81.333333333333343" height="21"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jFG-gC-M0J" firstAttribute="top" secondItem="Qrw-XN-xKT" secondAttribute="top" constant="90" id="Ov1-qW-2mf"/>
+                            <constraint firstItem="jFG-gC-M0J" firstAttribute="centerX" secondItem="H53-fq-o5v" secondAttribute="centerX" id="WD4-H3-jaA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qrw-XN-xKT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yE-tN-RgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="776"/>
         </scene>
     </scenes>
 </document>
