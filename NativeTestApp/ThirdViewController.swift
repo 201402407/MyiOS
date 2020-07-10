@@ -18,9 +18,12 @@ class ThirdViewController : UIViewController {
     // UILabel 객체 리턴
     lazy var testImageLabel: UILabel = {
         let posX: CGFloat = self.view.bounds.width / 2 // 이미지 가운데 정렬
-        let posY: CGFloat = 150
+        let posY: CGFloat = 250
         
-        let label: UILabel = UILabel(frame: CGRect(x: posX, y: posY, width: self.view.bounds.width, height: 50))
+        let label: UILabel = UILabel(frame: CGRect(x: 0, y: 200, width: self.view.bounds.width, height: 90))
+//        label.center.x = posX
+        label.textAlignment = .center
+        label.textColor = .red
         label.text = "TEST IMAGE"
         
         return label
@@ -29,7 +32,7 @@ class ThirdViewController : UIViewController {
     // ImageView 객체 리턴
     lazy var testImageView: UIImageView = {
         let posX: CGFloat = (self.view.bounds.width - self.imageWidth) / 2 // 이미지 가운데 정렬
-        let posY: CGFloat = 250
+        let posY: CGFloat = 300
         
         // ImageView 객체 생성
         let imageView: UIImageView = UIImageView(frame: CGRect(x: posX, y: posY, width: self.imageWidth, height: self.imageHeight))

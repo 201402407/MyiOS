@@ -9,22 +9,35 @@
 import Foundation
 import UIKit
 
-class MyTabBarController : UITabBarController, UITabBarControllerDelegate {
+class MyTabBarController : UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
+        createTabBar()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let item1 = ViewController()
-        let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "someImage.png"), selectedImage: UIImage(named: "otherImage.png"))
-//        let item1 = ViewController()
-//        let icon1 = UITabBarItem(title: "Title", image: UIImage(named: "someImage.png"), selectedImage: UIImage(named: "otherImage.png"))
-        item1.tabBarItem = icon1
-        let controllers = [item1]  //array of the root view controllers displayed by the tab bar interface
+    func createTabBar() {
+        NSLog("createTabBar 들어옴")
+        
+        let mainView = ViewController()
+//        guard let subView = self.presentingViewController?.storyboard?.instantiateViewController(withIdentifier: "subView") else { return }
+//        guard let subView = self.storyboard?.instantiateViewController(withIdentifier: "subView") else { return }
+        let subView = SubViewController()
+        let thirdView = ThirdViewController()
+        let tempView = TempViewController()
+        
+        let mainViewIcon = UITabBarItem(title: "mainView", image: UIImage(named: "battery-7"), tag: 0)
+        mainView.tabBarItem = mainViewIcon
+        let subViewIcon = UITabBarItem(title: "subView", image: UIImage(named: "bin-7"), tag: 1)
+        subView.tabBarItem = subViewIcon
+        let thirdViewIcon = UITabBarItem(title: "thirdView", image: UIImage(named: "basketball-7"), tag: 2)
+        thirdView.tabBarItem = thirdViewIcon
+        let tempViewIcon = UITabBarItem(title: "tempView", image: UIImage(named: "bin-7"), tag: 3)
+        tempView.tabBarItem = tempViewIcon
+        
+        let controllers = [mainView, subView, thirdView, tempView]  //array of the root view controllers displayed by the tab bar interface
         self.viewControllers = controllers
+        self.selectedViewController = thirdView
     }
 
     //Delegate methods

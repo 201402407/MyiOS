@@ -41,7 +41,8 @@ class SubViewController : UIViewController, UITextFieldDelegate {
     // 해당 화면이 처음 만들어질 때 한 번만 실행됨
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.delegate = self
+        self.view.backgroundColor = .brown
+//        textField.delegate = self
         
     }
     @IBAction func movePrevView(_ sender: Any) {

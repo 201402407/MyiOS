@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     // 화면이 처음 만들어질 때 한 번만 실행됨
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.view.addSubview(MyTabBarController().view)
+        
         
 //        let testImageViewController = UIImageView
 //        self.authCheck()
@@ -29,8 +31,14 @@ class ViewController: UIViewController {
     // ActionSheet Dialog 호출 버튼 이벤트
     @IBAction func getActionSheetDialog(_ sender: Any) {
         print("[START] make ActionSheet Dialog!")
-        makeAlertDialog(title: "TEST", message: "Alert Dialog", false)
+//        makeAlertDialog(title: "TEST", message: "Alert Dialog", false)
 //        Notification(self).getNoti(title: "asd", subtitle: "ff", body: "ggasg")
+        
+        // 화면 출력(present) 종류
+        let tabBarViewController = MyTabBarController()
+        tabBarViewController.modalTransitionStyle = .crossDissolve
+        tabBarViewController.modalPresentationStyle = .overCurrentContext
+        self.present(tabBarViewController, animated: true, completion: nil)
     }
     
     // 다음 ViewController 이동 호출 버튼 이벤트
@@ -38,7 +46,7 @@ class ViewController: UIViewController {
         print("[START] move Next View!")
         // 다른 storyboard의 VC 객체 가져오기
         // present로 VC 실행
-        guard let subVC = self.storyboard?.instantiateViewController(withIdentifier: "thirdView") else { return }
+        guard let subVC = self.storyboard?.instantiateViewController(withIdentifier: "subView") else { return }
         
         // 화면 전환 스타일 설정
         // UIModalTransitionStyle.coverVertical : 아래에서 위로 올라가면서 전환
